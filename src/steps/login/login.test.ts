@@ -11,7 +11,7 @@ test.describe('Login Page Validation', () => {
     });
 
     test('Login with valid credentials', async () => {
-        await loginPage.enterUsername(PropertiesReader.getCredentials("existingUsername"));
+        await loginPage.enterUsername(PropertiesReader.getCredentials("existingUsernames"));
         await loginPage.enterPassword(PropertiesReader.getCredentials("password"));
         await loginPage.clickLogin();
 

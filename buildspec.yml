@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+        - npx playwright install --with-deps
+    build:
+      commands:
+        - npx playwright test
+        - cp -r test-results/html-report production-poc-report
+  artifacts:
+    baseDirectory: amplify-report
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

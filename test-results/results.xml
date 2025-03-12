@@ -1,0 +1,38 @@
+<testsuites id="" name="" tests="7" failures="1" skipped="0" errors="0" time="49.808595000000004">
+<testsuite name="src\steps\login\forgot-password.test.ts" timestamp="2025-03-11T18:14:40.371Z" hostname="" tests="2" failures="0" skipped="0" time="7.247" errors="0">
+<testcase name="Forgot Password Page Validation › Reach Forgot Password Page" classname="src\steps\login\forgot-password.test.ts" time="3.626">
+</testcase>
+<testcase name="Forgot Password Page Validation › Try to reset password without filling email field" classname="src\steps\login\forgot-password.test.ts" time="3.621">
+</testcase>
+</testsuite>
+<testsuite name="src\steps\login\login.test.ts" timestamp="2025-03-11T18:14:40.371Z" hostname="" tests="5" failures="1" skipped="0" time="24.217" errors="0">
+<testcase name="Login Page Validation › Login with valid credentials" classname="src\steps\login\login.test.ts" time="4.474">
+<failure message="login.test.ts:13:9 Login with valid credentials" type="FAILURE">
+<![CDATA[  src\steps\login\login.test.ts:13:9 › Login Page Validation › Login with valid credentials ────────
+
+    Error: ❌ Credential for 'existingUsernames' not found in credentials.properties
+
+       at src\utils\PropertiesReader.ts:85
+
+      83 |     static getCredentials(key: string): string {
+      84 |         const value = this.properties["credentials"]?.[key];
+    > 85 |         if (!value) throw new Error(`❌ Credential for '${key}' not found in credentials.properties`);
+         |                           ^
+      86 |         return value;
+      87 |     }
+      88 |
+        at Function.getCredentials (C:\Projects\production-regression-poc\src\utils\PropertiesReader.ts:85:27)
+        at C:\Projects\production-regression-poc\src\steps\login\login.test.ts:14:56
+]]>
+</failure>
+</testcase>
+<testcase name="Login Page Validation › Login with invalid credentials" classname="src\steps\login\login.test.ts" time="4.673">
+</testcase>
+<testcase name="Login Page Validation › Access Forgot password flow" classname="src\steps\login\login.test.ts" time="4.89">
+</testcase>
+<testcase name="Login Page Validation › Access create an Everyset account page" classname="src\steps\login\login.test.ts" time="4.265">
+</testcase>
+<testcase name="Login Page Validation › Access Background Actor Portal page" classname="src\steps\login\login.test.ts" time="5.915">
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,368 @@
+{
+  "config": {
+    "configFile": "C:\\Projects\\production-regression-poc\\playwright.config.ts",
+    "rootDir": "C:/Projects/production-regression-poc",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "test-results/html-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Projects/production-regression-poc/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Projects/production-regression-poc",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "src\\steps\\login\\forgot-password.test.ts",
+      "file": "src/steps/login/forgot-password.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Forgot Password Page Validation",
+          "file": "src/steps/login/forgot-password.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Reach Forgot Password Page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3626,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:14:45.909Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4aadc47d43ed8997027a-d9b20d18903ac3799f1f",
+              "file": "src/steps/login/forgot-password.test.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "Try to reset password without filling email field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3621,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:14:50.683Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4aadc47d43ed8997027a-c4325ec9c0edf82634dc",
+              "file": "src/steps/login/forgot-password.test.ts",
+              "line": 25,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "src\\steps\\login\\login.test.ts",
+      "file": "src/steps/login/login.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Page Validation",
+          "file": "src/steps/login/login.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Login with valid credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 4474,
+                      "error": {
+                        "message": "Error: ❌ Credential for 'existingUsernames' not found in credentials.properties",
+                        "stack": "Error: ❌ Credential for 'existingUsernames' not found in credentials.properties\n    at Function.getCredentials (C:\\Projects\\production-regression-poc\\src\\utils\\PropertiesReader.ts:85:27)\n    at C:\\Projects\\production-regression-poc\\src\\steps\\login\\login.test.ts:14:56",
+                        "location": {
+                          "file": "C:\\Projects\\production-regression-poc\\src\\utils\\PropertiesReader.ts",
+                          "column": 27,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msrc\\utils\\PropertiesReader.ts:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m     \u001b[36mstatic\u001b[39m getCredentials(key\u001b[33m:\u001b[39m string)\u001b[33m:\u001b[39m string {\n \u001b[90m 84 |\u001b[39m         \u001b[36mconst\u001b[39m value \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mproperties[\u001b[32m\"credentials\"\u001b[39m]\u001b[33m?\u001b[39m\u001b[33m.\u001b[39m[key]\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mvalue) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`❌ Credential for '${key}' not found in credentials.properties`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m         \u001b[36mreturn\u001b[39m value\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     }\n \u001b[90m 88 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\production-regression-poc\\src\\utils\\PropertiesReader.ts",
+                            "column": 27,
+                            "line": 85
+                          },
+                          "message": "Error: ❌ Credential for 'existingUsernames' not found in credentials.properties\n\n\u001b[90m   at \u001b[39msrc\\utils\\PropertiesReader.ts:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m     \u001b[36mstatic\u001b[39m getCredentials(key\u001b[33m:\u001b[39m string)\u001b[33m:\u001b[39m string {\n \u001b[90m 84 |\u001b[39m         \u001b[36mconst\u001b[39m value \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mproperties[\u001b[32m\"credentials\"\u001b[39m]\u001b[33m?\u001b[39m\u001b[33m.\u001b[39m[key]\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mvalue) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`❌ Credential for '${key}' not found in credentials.properties`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m         \u001b[36mreturn\u001b[39m value\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     }\n \u001b[90m 88 |\u001b[39m\u001b[0m\n\u001b[2m    at Function.getCredentials (C:\\Projects\\production-regression-poc\\src\\utils\\PropertiesReader.ts:85:27)\u001b[22m\n\u001b[2m    at C:\\Projects\\production-regression-poc\\src\\steps\\login\\login.test.ts:14:56\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:14:46.085Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\production-regression-poc\\src\\utils\\PropertiesReader.ts",
+                        "column": 27,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "14bb24e9c9553c347f61-c42995bd1267fc497e41",
+              "file": "src/steps/login/login.test.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "Login with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4673,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:15:07.122Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "14bb24e9c9553c347f61-13c1a66b4cbeea599e79",
+              "file": "src/steps/login/login.test.ts",
+              "line": 21,
+              "column": 9
+            },
+            {
+              "title": "Access Forgot password flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4890,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:15:12.552Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "14bb24e9c9553c347f61-ee282d83a8b5351d5410",
+              "file": "src/steps/login/login.test.ts",
+              "line": 30,
+              "column": 9
+            },
+            {
+              "title": "Access create an Everyset account page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4265,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:15:17.466Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "14bb24e9c9553c347f61-3ff55a627a0746cc63ea",
+              "file": "src/steps/login/login.test.ts",
+              "line": 35,
+              "column": 9
+            },
+            {
+              "title": "Access Background Actor Portal page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5915,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-11T18:15:21.747Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "14bb24e9c9553c347f61-8664d1d7bf8d0be81e6d",
+              "file": "src/steps/login/login.test.ts",
+              "line": 41,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-03-11T18:14:38.874Z",
+    "duration": 49808.595,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

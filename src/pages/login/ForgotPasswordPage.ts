@@ -22,6 +22,10 @@ export class ForgotPasswordPage {
         await this.page.goto(PropertiesReader.getUrl("forgotPasswordURL"));
     }
 
+    async getCurrentUrl(): Promise<string> {
+        return this.page.url();
+    }
+  
     async enterEmail(email: string) {
         await this.emailInput.fill(email);
     }

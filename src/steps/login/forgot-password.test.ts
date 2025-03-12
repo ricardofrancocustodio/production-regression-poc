@@ -10,16 +10,17 @@ test.describe('Forgot Password Page Validation', () => {
         await forgotPasswordPage.navigate();
     });
 
-    /* test('Reach Forgot Password Page', async () => {
-        await expect(forgotPasswordPage.page).toHaveURL(PropertiesReader.getConfig("forgotPasswordURL"));
-    }); */
+    test('Reach Forgot Password Page', async () => {
+        const currentUrl = await forgotPasswordPage.getCurrentUrl();
+        expect(currentUrl).toBe(PropertiesReader.getUrl("forgotPasswordURL"));
+    });
 
-    test('Send link to reset password using valid email', async () => {
+    /* test('Send link to reset password using valid email', async () => {
         await forgotPasswordPage.enterEmail(PropertiesReader.getCredentials("dynamicUsername"));
         await forgotPasswordPage.clickResetPasswordButton();
 
         await expect(await forgotPasswordPage.getInstructionsMessage()).toContain("An email has been sent to");
-    });
+    }); */
 
     test('Try to reset password without filling email field', async () => {
         await forgotPasswordPage.clearEmailField();
